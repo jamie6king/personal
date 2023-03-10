@@ -1,0 +1,33 @@
+// homepage.pug
+// Homepage template file
+
+// HTML5 Stuff
+doctype html
+html(lang="en")
+
+    // Head
+    head
+        include partials/head
+        title jamie6king
+        link(rel="stylesheet", href="/css/homepage.css")
+
+    // Body
+    body
+
+        // Navbar
+        nav
+            a(href="/") jamie6king
+        
+        // Main
+        div.scrollable
+
+            // Links to other pages
+            section.dual.links
+
+                // Blog
+                a.section.blog(href="/blog")
+                    p.title visit my blog
+
+                // Projects
+                a.section.projects(href="/projects")
+                    p.title visit my projects
