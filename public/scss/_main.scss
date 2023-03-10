@@ -1,0 +1,106 @@
+/*
+_main.scss
+SCSS file for universial CSS
+*/
+
+// Sizing
+$h_nav: 64px;
+
+// Colors
+$c_dark: #252422;
+$c_dark-alt: #403d39;
+$c_white: #fffcf2;
+$c_white-alt: #ccc5b9;
+$c_accent: #eb5e28;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$f_heading: 32px;
+
+// Transition
+$transition: 0.1s ease-in-out;
+
+@font-face {
+    font-family: Iosevka;
+    src: url("../fonts/iosevka-regular.ttf");
+}
+
+// Universal
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $c_white;
+    font-family: "Roboto";
+    font-size: 14pt;
+}
+
+// Body
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: $h_nav auto;
+    background-color: $c_dark;
+
+    // Navbar
+    nav {
+        line-height: $h_nav;
+        z-index: 999;
+        padding: 0 16px;
+
+        // Navbar links
+        a {
+            font-family: "Iosevka";
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+                color: $c_accent;
+            }
+        }
+    }
+
+    // Main area
+    .scrollable {
+        margin: 0 256px;
+        overflow-x: scroll;
+
+        // Sections
+        section {
+
+            // Dual
+            &.dual {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+
+                // Links
+                a {
+                    text-decoration: none;
+
+                    // Big sections
+                    &.section {
+                        padding: 32px;
+                        background-color: $c_dark-alt;
+                        transition: $transition;
+
+                        &:hover {
+                            background-color: $c_accent;
+                        }
+
+                        // Title
+                        p {
+                            
+                            &.title {
+                                font-size: $f_heading;
+                                font-family: "Iosevka";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
