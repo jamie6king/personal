@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
     res.render("homepage")
 })
 
+// GET blog
+app.use("/blog", require("./routes/blog"))
+
 // GET 404
 app.get("*", (req, res) => {
     res.render("404")

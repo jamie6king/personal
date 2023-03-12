@@ -1,0 +1,40 @@
+/*
+blog-homepage.scss
+SCSS file for blog homepage
+*/
+
+// Import main SCSS
+@import "main";
+
+// Scrollable
+.scrollable {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: min-content;
+
+    // Blog post
+    a.single {
+        padding: 24px;
+        background-color: $c_dark-alt;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover {
+            background-color: $c_accent;
+        }
+
+        p {
+
+            // Title
+            &.title {
+                font-size: $f_subheading;
+                padding-bottom: 4px;
+            }
+
+            // Date
+            &.date {
+                font-family: "Iosevka";
+            }
+        }
+    }
+}

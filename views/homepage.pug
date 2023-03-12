@@ -15,8 +15,7 @@ html(lang="en")
     body
 
         // Navbar
-        nav
-            a(href="/") jamie6king
+        include partials/nav
         
         // Main
         div.scrollable
@@ -31,3 +30,6 @@ html(lang="en")
                 // Projects
                 a.section.projects(href="/projects")
                     p.title visit my projects
+
+    // Link to Mastodon to get tick
+    a(ref="me" href="https://fosstodon.org/@jamie6king")

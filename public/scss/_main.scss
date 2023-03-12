@@ -15,7 +15,8 @@ $c_accent: #eb5e28;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-$f_heading: 32px;
+$f_heading: 32pt;
+$f_subheading: 24pt;
 
 // Transition
 $transition: 0.1s ease-in-out;
@@ -70,6 +71,12 @@ body {
         // Sections
         section {
 
+            &.single {
+                width: 100%;
+                padding: 24px;
+                background-color: $c_dark-alt;
+            }
+
             // Dual
             &.dual {
                 display: grid;
@@ -98,6 +105,30 @@ body {
                                 font-family: "Iosevka";
                             }
                         }
+                    }
+                }
+            }
+
+            // Center
+            &.center {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // Text
+                p {
+                    color: $c_dark-alt;
+                    cursor: default;
+                    font-size: 128pt;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $c_accent;
                     }
                 }
             }

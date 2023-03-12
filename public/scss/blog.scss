@@ -1,0 +1,23 @@
+/*
+blog.scss
+SCSS for the blog page
+*/
+
+// Import main SCSS file
+@import "main";
+
+// Main area
+.scrollable {
+    margin: 0 400px 0 256px !important;
+}
+
+// Sidebar
+.sidebar {
+    position: absolute;
+    top: 64px;
+    right: 0;
+
+    width: 384px;
+    padding: 32px;
+    background-color: $c_dark-alt;
+}

@@ -1,0 +1,30 @@
+// blog-homepage.pug
+// Blog homepage template file
+
+// HTML5 Stuff
+doctype html
+html(lang="en")
+
+    // Head
+    head
+        include partials/head
+        title jamie6king
+        link(rel="stylesheet", href="/css/blog-homepage.css")
+
+    // Body
+    body
+
+        // Navbar
+        include partials/nav
+        
+        // Main
+        div.scrollable
+
+            if blog_posts.length == 0
+                section.center
+                    p No blog posts
+            else
+                each post in blog_posts
+                    a.single(href=post.link)
+                        p.title= post.title
+                        p.date= post.date
