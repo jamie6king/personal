@@ -60,6 +60,12 @@ body {
             &:hover {
                 color: $c_accent;
             }
+
+            // Right-leaning
+            &.right {
+                float: right;
+                margin-left: 16px;
+            }
         }
     }
 
